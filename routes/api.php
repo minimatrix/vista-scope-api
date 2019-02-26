@@ -26,6 +26,9 @@ Route::group(['middleware' => 'auth:api'], function () {
     // Auth
     Route::post('auth/verify/token', 'AuthController@getUserFromToken');
 
+    //BoARDS 
+    Route::apiResource('boards', 'BoardController');
+
     // Users
     Route::get('users/search', 'UserController@search');
     Route::get('users/list', 'UserController@list');
